@@ -5,7 +5,6 @@ import java.util.Scanner;
 import Utilites.Input;
 
 public class Comodato extends Place {
-	private double tax;
 	private int duration;
 
 	public Comodato(){
@@ -25,14 +24,15 @@ public class Comodato extends Place {
 		System.out.println("Ingrese la Sugerencia:");
 		super.setSuggest(scanner.next());
 
-		tax = calcTax();
+		super.setTax(calcTax());
 	}
 
 	@Override
 	public void showPlace() {
-		System.out.println("Vivienda de Comodato\n");
+		System.out.println("Vivienda de Comodato");
 		super.showPlace();
-		System.out.println("Y debe pagar un impuesto mensual de " + tax);
+		System.out.println("Y debe pagar un impuesto mensual de " + super.getTax());
+		System.out.println("\n");
 	}
 
 	@Override
@@ -40,5 +40,13 @@ public class Comodato extends Place {
 		duration = Input.checkInt("duracion del comodato");
 		double marketAmount = Input.checkDouble("monto del mercado actual");
 		return marketAmount * 0.15;
+	}
+
+	public int getDuration() {
+		return duration;
+	}
+
+	public void setDuration(int duration) {
+		this.duration = duration;
 	}
 }

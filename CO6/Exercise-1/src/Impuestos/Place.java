@@ -7,6 +7,7 @@ import Utilites.Input;
 public class Place {
 	private String code, address, suggest;
 	private int people;
+	private double tax;
 
 	
 	public Place() {}
@@ -16,6 +17,7 @@ public class Place {
 		this.address = address;
 		this.people = people;
 		this.suggest = "";
+		this.tax = 0.00;
 	}
 
 	public double calcTax() {
@@ -70,6 +72,14 @@ public class Place {
 
 	public void setPeople(int people) {
 		this.people = people;
+	}
+	
+	public double getTax() {
+		return tax;
+	}
+
+	public void setTax(double tax) {
+		this.tax= tax;
 	}
 
 }

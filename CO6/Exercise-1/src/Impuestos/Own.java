@@ -6,7 +6,6 @@ import Utilites.Input;
 
 public class Own extends Place{
 	private String date;
-	private double tax;
 
 	public Own() {
 		super();
@@ -25,15 +24,16 @@ public class Own extends Place{
 		System.out.println("Ingrese la Sugerencia:");
 		super.setSuggest(scanner.next());
 
-		tax = calcTax();
+		super.setTax(calcTax());
 	}
 
 	@Override
 	public void showPlace() {
-		System.out.println("Vivienda Propia\n");
-		System.out.println("Comprada el " + date + "\n");
+		System.out.println("Vivienda Propia");
+		System.out.println("Comprada el " + date);
 		super.showPlace();
-		System.out.println("Y debe pagar un impuesto anual de " + tax);
+		System.out.println("Y debe pagar un impuesto anual de " + super.getTax());
+		System.out.println("\n");
 	}
 
 	@Override
@@ -43,6 +43,14 @@ public class Own extends Place{
 		date = scanner.next();
 		double amount = Input.checkInt("el monto de la compra");
 		return amount * 0.01;
+	}
+
+	public String getDate() {
+		return date;
+	}
+
+	public void setDate(String date) {
+		this.date = date;
 	}
 
 }

@@ -5,7 +5,7 @@ import java.util.Scanner;
 import Utilites.Input;
 
 public class Rent extends Place{
-	private double tax, rentAmount;
+	private double rentAmount;
 
 	public Rent() {
 		super();
@@ -24,19 +24,28 @@ public class Rent extends Place{
 		System.out.println("Ingrese la Sugerencia:");
 		super.setSuggest(scanner.next());
 
-		tax = calcTax();
+		super.setTax(calcTax());
 	}
 
 	@Override
 	public void showPlace() {
-		System.out.println("Vivienda Rentada\n");
+		System.out.println("Vivienda Rentada");
 		super.showPlace();
-		System.out.println("Y debe pagar un impuesto mensual de " + tax);
+		System.out.println("Y debe pagar un impuesto mensual de " + super.getTax());
+		System.out.println("\n");
 	}
 
 	@Override
 	public double calcTax() {
 		rentAmount = Input.checkDouble("el monto del alquiler");
 		return rentAmount * 0.1;
+	}
+
+	public double getRentAmount() {
+		return rentAmount;
+	}
+
+	public void setRentAmount(double rentAmount) {
+		this.rentAmount = rentAmount;
 	}
 }
