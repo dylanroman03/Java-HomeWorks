@@ -11,13 +11,13 @@ import Data.Datos;
 public class Principal {
 	public Datos datos; 
 	public static Vuelos[] viajes = new Vuelos[5];
-	public static Azafata[] azafataVec = new Azafata[2];
+	public static Azafata[] azafataVec = new Azafata[1];
 	public static Pasajero[] pasajeroVec  = new Pasajero[1];
-	public static Piloto[] pilotoVec = new Piloto[3];
+	public static Piloto[] pilotoVec = new Piloto[1];
 
 	public static void main(String[] args) {
-		System.out.println("Hello World");
 		cargarDatos();
+		mostrarCategoria();
 		destinoFavorito();
 		mejorPiloto();
 	}
@@ -73,21 +73,22 @@ public class Principal {
 		}
 	}
 
-	public void mostrarCategoria() {
-		System.out.println("Pasajeros");
+	public static void mostrarCategoria() {
+		System.out.println("\nPasajeros");
 		for (int i = 0; i < pasajeroVec.length; i++) {
 			pasajeroVec[i].mostrar();
 		}	
 
-		System.out.println("Azafatas");
+		System.out.println("\nAzafatas");
 		for (int i = 0; i < azafataVec.length; i++) {
 			azafataVec[i].mostrar();
 		}	
 
-		System.out.println("Pilotos");
+		System.out.println("\nPilotos");
 		for (int i = 0; i < pilotoVec.length; i++) {
 			pilotoVec[i].mostrar();
 		}	
+		System.out.println("\n");
 	}
 
 	public static void destinoFavorito() {
@@ -133,7 +134,7 @@ public class Principal {
 		}		
 
 		System.out.println("El destino favorito es: " + destinos[viajeMax]);
-		System.out.println("El monto total es de: " + monto);
+		System.out.println("El monto total es de: " + monto + "\n");
 	}
 
 	public static void mejorPiloto() {
