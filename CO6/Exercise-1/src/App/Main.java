@@ -13,7 +13,7 @@ public class Main {
         Comodato[] comodatoVector = new Comodato[3];
         Rent[] rentVector = new Rent[3];
 
-        for (int index = 0; index < 3; index++) {
+        for (int index = 0; index < ownVector.length; index++) {
             System.out.print("\033[H\033[2J"); 
             System.out.println("Datos de la casa propia #" + (index + 1));
             Own newOwn = new Own();
@@ -21,7 +21,7 @@ public class Main {
             ownVector[index] = newOwn;
         }
 
-        for (int index = 0; index < 3; index++) {
+        for (int index = 0; index < comodatoVector.length; index++) {
             System.out.print("\033[H\033[2J"); 
             System.out.println("Datos del Comodato #" + (index + 1));
             Comodato newComodato = new Comodato();
@@ -29,7 +29,7 @@ public class Main {
             comodatoVector[index] = newComodato;
         }
 
-        for (int index = 0; index < 3; index++) {
+        for (int index = 0; index < rentVector.length; index++) {
             System.out.print("\033[H\033[2J"); 
             System.out.println("Datos de la renta #" + (index + 1));
             Rent newRent = new Rent();

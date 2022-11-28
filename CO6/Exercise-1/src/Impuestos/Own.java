@@ -32,7 +32,7 @@ public class Own extends Place{
 		System.out.println("Vivienda Propia");
 		System.out.println("Comprada el " + date);
 		super.showPlace();
-		System.out.println("Y debe pagar un impuesto anual de " + super.getTax());
+		System.out.println("Y debe pagar un impuesto mensual de de " + super.getTax());
 		System.out.println("\n");
 	}
 
@@ -42,7 +42,7 @@ public class Own extends Place{
 		System.out.println("Ingrese la fecha de compra:");
 		date = scanner.next();
 		double amount = Input.checkInt("el monto de la compra");
-		return amount * 0.01;
+		return (amount * 0.01) / 12;
 	}
 
 	public String getDate() {
