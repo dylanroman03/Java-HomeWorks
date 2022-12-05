@@ -69,7 +69,7 @@ public class Implementacion implements Maximos {
 
 			System.out.print(paciente.getNombreCompleto(paciente.getCedula()) + "\t");
 			paciente.calcularSensibilidad();
-			System.out.print("\t" + paciente.getMontoPago() + "\n");
+			System.out.print("\t" + String.format("%.2f", paciente.getMontoPago()) + "\n");
 		}
 	}
 
