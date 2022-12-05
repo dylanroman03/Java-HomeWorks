@@ -48,7 +48,7 @@ public class PacienteConOrden extends Persona {
 		double descuento = 0.00;
 
 		for (Examen examen : orden) {
-			monto +=	examen.getPrecio();
+			monto +=	examen.calcularPrecioReal();
 		}
 		
 		if(orden.length > 3) {
@@ -61,10 +61,6 @@ public class PacienteConOrden extends Persona {
 
 	public Examen[] getOrden() {
 		return orden;
-	}
-
-	public void setOrden(Examen[] orden) {
-		this.orden = orden;
 	}
 
 	public double getMontoPago() {
