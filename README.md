@@ -1,5 +1,5 @@
 # JAVA HomeWorks
-HomeWorks in Java
+HomeWorks Made in 2022 for the course `Programacion II` at the University UNET
 
 ```bash
 Project Structure:
